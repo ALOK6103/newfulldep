@@ -26,7 +26,7 @@ noteRouter.get("/",async(req,res)=>{
 })
 
 
-noteRouter.patch("/update/:id",async(req,res)=>{
+noteRouter.put("/update/:id",async(req,res)=>{
     const {id}=req.params
     try {
         await NoteModel.findByIdAndUpdate({_id:id},req.body)
